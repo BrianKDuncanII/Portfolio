@@ -27,15 +27,17 @@ body {
     border-bottom: 1px solid rgb(100, 100, 100);
 }
 
-#profile_picture {
-    width: 12%;
-    height: 5%;
-    border-radius: 100%;
-    border: 3px solid rgb(100, 100, 100);
-    display: block;
-    margin: 0 auto;
-    margin-top: 115px;
-    margin-bottom: -230px;
+.project_container {
+  border: 2px solid #72a6f9;
+  padding: 10px;
+  word-wrap: break-word;
+  margin-top: 25px;
+}
+
+.project_image {
+  border: 2px solid black;
+  border-radius: 25px;
+  height: 150px;
 }
 
 i {

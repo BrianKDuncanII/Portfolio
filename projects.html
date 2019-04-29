@@ -8,10 +8,11 @@
     <script src="bootstrap/js/bootstrap.js"></script>
 
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Montserrat Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -22,18 +23,42 @@
 </head>
 
 <body>
-        <p class="montserrat_font" style="text-align: center;">Brian Duncan | 2019</p>
+    <p class="montserrat_font" style="text-align: center;">Brian Duncan | 2019</p>
 
-        <div class="montserrat_font" id="toolbar">
-            <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a href="index.html">Home</a></h2>
-            <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a href="about.html">About</a></h2>
-            <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a href="#">Projects</a></h2>
-            <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a href="skills.html">Skills</a></h2>
-            <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a href="contact.html">Contact</a></h2>
-        </div>
+    <div class="montserrat_font" id="toolbar">
+        <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a
+                href="index.html">Home</a></h2>
+        <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a
+                href="about.html">About</a></h2>
+        <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a
+                href="#">Projects</a></h2>
+        <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a
+                href="skills.html">Skills</a></h2>
+        <h2 id="toolbar_item" class="text-focus-in" style="display: inline; margin-right: 20px;"><a
+                href="contact.html">Contact</a></h2>
+    </div>
 
-        <div class="swing-in-top-fwd">
-            <h1 style="text-align: center; margin-top:150px;" class="montserrat_font">No Projects Here Yet!</h1>
-            <i style="text-align: center; display: inline-block; width: 100%; color: #72a6f9;" class="fas fa-sad-tear fa-5x"></i>
+    <div style="margin: auto; width: 700px;">
+        <div class="montserrat_font swing-in-top-fwd project_container">
+            <a href="ctrlaltnet.com">
+                <h2>CtrlAltNet</h2>
+                <h5 style="display:inline;">Business website for CtrlAltNet - a web development company.</h5>
+                <img class="project_image" src="img/ctrlaltnet_capture.png">
+            </a>
         </div>
-    </body>
+        <div class="montserrat_font swing-in-top-fwd project_container">
+            <a href="https://briankduncanii.github.io/Hermanos/">
+                <h2>Hermanos</h2>
+                <h5 style="display:inline;">Static landing page for Hermanos - a taqueria & bakery.</h5>
+                <img class="project_image" src="img/hermanos_capture.png">
+            </a>
+        </div>
+        <div class="montserrat_font swing-in-top-fwd project_container">
+            <a href="https://briankduncanii.github.io/Grove/">
+                <h2>Grove</h2>
+                <h5 style="display:inline;">An idle game where you play as a tree. Written in JavaScript.</h5>
+                <img class="project_image" src="img/grove_capture.png">
+            </a>
+        </div>
+    </div>
+</body>
