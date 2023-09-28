@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brian Duncan II</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c0a6897b31.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tippy.js -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div style="min-height: 100%;" id="main-container" class="container-fluid">
+            <div class="row">
+                <div style="text-align: center; padding-top: 1em;" id="navbar-container" class="col-md-2">
+                    <img src="img/brian-duncan.jpg" alt="Brian Duncan II" id="profile-pic">
+                    <h5 style="pointer-events: none;" id="name-display">Brian Duncan II</h5>
+                    <div>
+                        <a id="github" style="margin-right: 0.5em;" target="_blank" href="https://github.com/BrianKDuncanII"><i class="fa-brands fa-2x fa-square-github"></i></a>
+                        <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/brian-duncan-9b048b291/"><i class="fa-brands fa-2x fa-linkedin"></i></a>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a id="home-button" onclick="pageChange('home-page')" class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="about-button" onclick="pageChange('about-me-page')" class="nav-link" href="#"><i class="fa-solid fa-user"></i> About Me</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button id="projects-button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-palette"></i> Projects
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a onclick="openProjectPage('web development')" class="dropdown-item" href="#">Web Development <i class="fa-solid fa-code"></i></a></li>
+                              <li><a onclick="openProjectPage('unreal engine')" class="dropdown-item" href="#">Unreal Engine 4 & 5 <i class="fa-solid fa-gamepad"></i></a></li>
+                              <li><a onclick="openProjectPage('game maker')" class="dropdown-item" href="#">Game Maker Studio <i class="fa-solid fa-gamepad"></i></a></li>
+                              <li><a onclick="openProjectPage('ableton live')" class="dropdown-item" href="#">Ableton Live <i class="fa-solid fa-music"></i></a></li>
+                            </ul>
+                          </li>
+                  
+                        <li class="nav-item">
+                            <a id="contact-button" onclick="pageChange('contact-me-page')" class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contact Me</a>
+                        </li>
+                        <li class="nav-item" style="margin-top: 2em;">
+                            <a class="nav-link" href="resource/brian-duncanII-resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="padding-top: 1em;" id="home-page" class="col-md-9">
+                    <h3>Home</h3>
+                    <hr style="color: white;">
+                </div>
+                <div style="padding-top: 1em;" id="contact-me-page" class="col-md-9" hidden>
+                    <h3>Contact Me</h3>
+                    <hr style="color: white;">
+                    <div style="background-color: #8080a4;" class="card">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-at"></i> Email Address: BrianKDuncan2@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> Phone Number: 737-373-0380</p>
+                            <button type="button" class="btn btn-dark" onclick="openLinkedin()"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="padding-top: 1em;" id="about-me-page" class="col-md-9" hidden>
+                    <h3>About Me</h3>
+                    <hr style="color: white;">
+                </div>
+
+                <div style="padding-top: 1em;" id="web-development-page" class="col-md-9" hidden>
+                    <h3>Web Development</h3>
+                    <hr style="color: white;">
+                    <div class="card custom-card-border" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Grove</h5>
+                          <h6 class="card-subtitle mb-2 text-body-secondary">Incremental Game</h6>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a target="_blank" href="https://studiotricolor.github.io/Grove/" class="card-link">Game Link</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div style="padding-top: 1em;" id="unreal-engine-page" class="col-md-9" hidden>
+                    <h3>Unreal Engine 4 & 5</h3>
+                    <hr style="color: white;">
+                </div>
+
+                <div style="padding-top: 1em;" id="game-maker-page" class="col-md-9" hidden>
+                    <h3>Game Maker Studio</h3>
+                    <hr style="color: white;">
+                </div>
+
+                <div style="padding-top: 1em;" id="ableton-live-page" class="col-md-9" hidden>
+                    <h3>Ableton Live</h3>
+                    <hr style="color: white;">
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer-container"
+            style="text-align: center; position: fixed; bottom: 0; width: 100%; background-color: #232335;">
+            <div class="container">
+                <div class="row">
+                    <p>Brian Duncan II - 2023 <i class="fa-solid fa-mug-saucer"></i></p>
+                </div>
+            </div>
+    </div>
+    </footer>
+    </div>
+</body>
+
+<script src="js/main.js"></script>

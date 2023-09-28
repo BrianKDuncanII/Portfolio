@@ -1,0 +1,53 @@
+html, body {
+    background-color: #333346;
+    font-family: 'Inter', sans-serif;
+}
+
+#navbar-container {
+    background-color: #535373;
+}
+
+#main-container {
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: #e6e6ec !important;
+}
+
+a {
+    text-decoration: none;
+    color: #a6a6bf !important;
+}
+
+a:active {
+    color: #e6e6ec !important;
+}
+
+a:hover {
+    color: #e6e6ec !important;
+}
+
+.active {
+    text-shadow: 0em 0em 0.25em #e6e6ec;
+    color: #e6e6ec !important;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    border: 2px solid #e6e6ec;
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 2em;
+}
+
+.card-body {
+    background-color: #8080a4;
+    border: 0em;
+}
+
+.custom-card-border {
+    border: 2px solid #1a1a24; /* Change 'red' to the desired border color */
+    border-radius: 1em;
+  }
