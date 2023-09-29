@@ -6,7 +6,7 @@ console.log("main.js loaded");
 // Define the profilePictureSwitch function
 function profilePictureSwitch() {
     const profilePic = document.getElementById("profile-pic");
-    if(profilePicAlt) {
+    if (profilePicAlt) {
         profilePic.src = "img/brian-duncan.jpg";
         profilePicAlt = false;
     } else {
@@ -17,7 +17,7 @@ function profilePictureSwitch() {
 }
 
 function pageChange(pageName) {
-    if(pageName == "home-page") {
+    if (pageName == "home-page") {
         document.getElementById("home-page").hidden = false;
         document.getElementById("contact-me-page").hidden = true;
         // remove 'active' class from contact-me-button
@@ -27,7 +27,7 @@ function pageChange(pageName) {
         document.getElementById("about-button").classList = "nav-link";
 
         closeProjectPage();
-    } else if(pageName == "contact-me-page") {
+    } else if (pageName == "contact-me-page") {
         document.getElementById("home-page").hidden = true;
         document.getElementById("contact-me-page").hidden = false;
         document.getElementById("contact-button").classList = "nav-link active";
@@ -36,7 +36,7 @@ function pageChange(pageName) {
         document.getElementById("about-button").classList = "nav-link";
 
         closeProjectPage();
-    } else if(pageName == "about-me-page") {
+    } else if (pageName == "about-me-page") {
         document.getElementById("home-page").hidden = true;
         document.getElementById("about-me-page").hidden = false;
         document.getElementById("about-button").classList = "nav-link active";
@@ -69,13 +69,13 @@ function openProjectPage(projectPage) {
     document.getElementById("home-button").classList = "nav-link";
     document.getElementById("about-button").classList = "nav-link";
 
-    if(projectPage == "web development") {
+    if (projectPage == "web development") {
         document.getElementById("web-development-page").hidden = false;
-    } else if(projectPage == "unreal engine") {
+    } else if (projectPage == "unreal engine") {
         document.getElementById("unreal-engine-page").hidden = false;
-    } else if(projectPage == "game maker") {
+    } else if (projectPage == "game maker") {
         document.getElementById("game-maker-page").hidden = false;
-    } else if(projectPage == "ableton live") {
+    } else if (projectPage == "ableton live") {
         document.getElementById("ableton-live-page").hidden = false;
     }
 }
@@ -90,26 +90,71 @@ function openLinkedin() {
     window.open("https://www.linkedin.com/in/brian-duncan-9b048b291/", "_blank");
 }
 
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     // Get all the dropdown items
     var dropdownItems = document.querySelectorAll(".dropdown-item");
 
     // Add a click event listener to each dropdown item
     dropdownItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        // Close the dropdown
-        var dropdown = document.querySelector(".dropdown");
-        var dropdownMenu = dropdown.querySelector(".dropdown-menu");
-        var bootstrapDropdown = new bootstrap.Dropdown(dropdown);
-        bootstrapDropdown.hide();
-      });
+        item.addEventListener("click", function () {
+            // Close the dropdown
+            var dropdown = document.querySelector(".dropdown");
+            var dropdownMenu = dropdown.querySelector(".dropdown-menu");
+            var bootstrapDropdown = new bootstrap.Dropdown(dropdown);
+            bootstrapDropdown.hide();
+        });
     });
-  });
+});
 
-  tippy('#github', {
+tippy('#github', {
     content: "Github",
-  });
+});
 
-  tippy('#linkedin', {
+tippy('#linkedin', {
     content: "LinkedIn",
-  });
+});
+
+function projectNavBarChange(selection, elementID) {
+    navBarReference = document.getElementById(elementID);
+
+    overviewSection = navBarReference.querySelector(".project-overview");
+    toolsUsedSection = navBarReference.querySelector(".project-tools-used");
+    keyFeaturesSection = navBarReference.querySelector(".project-key-features");
+    lessonsLearnedSection = navBarReference.querySelector(".project-lessons-learned");
+    projectImagesSection = navBarReference.querySelector(".project-images");
+
+    navOverview = navBarReference.querySelector(".nav-overview");
+    navToolsUsed = navBarReference.querySelector(".nav-tools-used");
+    navKeyFeatures = navBarReference.querySelector(".nav-key-features");
+    navLessonsLearned = navBarReference.querySelector(".nav-lessons-learned");
+    navProjectImages = navBarReference.querySelector(".nav-project-images");
+
+    overviewSection.hidden = true;
+    toolsUsedSection.hidden = true;
+    keyFeaturesSection.hidden = true;
+    lessonsLearnedSection.hidden = true;
+    projectImagesSection.hidden = true;
+
+    navOverview.classList = "nav-link nav-overview";
+    navToolsUsed.classList = "nav-link nav-tools-used";
+    navKeyFeatures.classList = "nav-link nav-key-features";
+    navLessonsLearned.classList = "nav-link nav-lessons-learned";
+    navProjectImages.classList = "nav-link nav-project-images";
+
+    if (selection == "overview") {
+        overviewSection.hidden = false;
+        navOverview.classList = "nav-link active nav-overview";
+    } else if (selection == "tools used") {
+        toolsUsedSection.hidden = false;
+        navToolsUsed.classList = "nav-link active nav-tools-used";
+    } else if (selection == "key features") {
+        keyFeaturesSection.hidden = false;
+        navKeyFeatures.classList = "nav-link active nav-key-features";
+    } else if (selection == "lessons learned") {
+        lessonsLearnedSection.hidden = false;
+        navLessonsLearned.classList = "nav-link active nav-lessons-learned";
+    } else if (selection == "images") {
+        projectImagesSection.hidden = false;
+        navProjectImages.classList = "nav-link active nav-project-images";
+    }
+}
