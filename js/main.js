@@ -110,6 +110,10 @@ tippy('#github', {
     content: "Github",
 });
 
+tippy('#github-alt', {
+    content: "Github Repository",
+});
+
 tippy('#linkedin', {
     content: "LinkedIn",
 });
