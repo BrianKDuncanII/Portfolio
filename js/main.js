@@ -25,6 +25,7 @@ function pageChange(pageName) {
         document.getElementById("home-button").classList = "nav-link active";
         document.getElementById("about-me-page").hidden = true;
         document.getElementById("about-button").classList = "nav-link";
+        document.getElementById("changelogs-button").classList = "nav-link";
 
         closeProjectPage();
     } else if (pageName == "contact-me-page") {
@@ -34,6 +35,7 @@ function pageChange(pageName) {
         document.getElementById("home-button").classList = "nav-link";
         document.getElementById("about-me-page").hidden = true;
         document.getElementById("about-button").classList = "nav-link";
+        document.getElementById("changelogs-button").classList = "nav-link";
 
         closeProjectPage();
     } else if (pageName == "about-me-page") {
@@ -43,8 +45,18 @@ function pageChange(pageName) {
         document.getElementById("home-button").classList = "nav-link";
         document.getElementById("contact-me-page").hidden = true;
         document.getElementById("contact-button").classList = "nav-link";
+        document.getElementById("changelogs-button").classList = "nav-link";
 
         closeProjectPage();
+    } else if(pageName == "changelogs-page") {
+        document.getElementById("home-page").hidden = true;
+        document.getElementById("about-me-page").hidden = true;
+        document.getElementById("contact-me-page").hidden = true;
+        document.getElementById("changelogs-page").hidden = false;
+        document.getElementById("changelogs-button").classList = "nav-link active";
+        document.getElementById("home-button").classList = "nav-link";
+        document.getElementById("about-button").classList = "nav-link";
+        document.getElementById("contact-button").classList = "nav-link";
     }
 }
 
@@ -55,12 +67,14 @@ function closeProjectPage() {
     document.getElementById("unreal-engine-page").hidden = true;
     document.getElementById("game-maker-page").hidden = true;
     document.getElementById("ableton-live-page").hidden = true;
+    document.getElementById("changelogs-page").hidden = true;
 }
 
 function openProjectPage(projectPage) {
     document.getElementById("home-page").hidden = true;
     document.getElementById("about-me-page").hidden = true;
     document.getElementById("contact-me-page").hidden = true;
+    document.getElementById("changelogs-page").hidden = true;
 
     closeProjectPage();
 
@@ -68,6 +82,7 @@ function openProjectPage(projectPage) {
     document.getElementById("contact-button").classList = "nav-link";
     document.getElementById("home-button").classList = "nav-link";
     document.getElementById("about-button").classList = "nav-link";
+    document.getElementById("changelogs-button").classList = "nav-link";
 
     if (projectPage == "web development") {
         document.getElementById("web-development-page").hidden = false;
@@ -77,6 +92,8 @@ function openProjectPage(projectPage) {
         document.getElementById("game-maker-page").hidden = false;
     } else if (projectPage == "ableton live") {
         document.getElementById("ableton-live-page").hidden = false;
+    } else if(projectPage == "changelogs") {
+        document.getElementById("changelogs-page").hidden = false;
     }
 }
 
