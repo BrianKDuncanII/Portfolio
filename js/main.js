@@ -26,6 +26,7 @@ function pageChange(pageName) {
         document.getElementById("about-me-page").hidden = true;
         document.getElementById("about-button").classList = "nav-link";
         document.getElementById("changelogs-button").classList = "nav-link";
+        document.getElementById("changelogs-page").hidden = true;
 
         closeProjectPage();
     } else if (pageName == "contact-me-page") {
@@ -36,6 +37,7 @@ function pageChange(pageName) {
         document.getElementById("about-me-page").hidden = true;
         document.getElementById("about-button").classList = "nav-link";
         document.getElementById("changelogs-button").classList = "nav-link";
+        document.getElementById("changelogs-page").hidden = true;
 
         closeProjectPage();
     } else if (pageName == "about-me-page") {
@@ -46,9 +48,10 @@ function pageChange(pageName) {
         document.getElementById("contact-me-page").hidden = true;
         document.getElementById("contact-button").classList = "nav-link";
         document.getElementById("changelogs-button").classList = "nav-link";
+        document.getElementById("changelogs-page").hidden = true;
 
         closeProjectPage();
-    } else if(pageName == "changelogs-page") {
+    } else if (pageName == "changelogs-page") {
         document.getElementById("home-page").hidden = true;
         document.getElementById("about-me-page").hidden = true;
         document.getElementById("contact-me-page").hidden = true;
@@ -57,6 +60,8 @@ function pageChange(pageName) {
         document.getElementById("home-button").classList = "nav-link";
         document.getElementById("about-button").classList = "nav-link";
         document.getElementById("contact-button").classList = "nav-link";
+
+        closeProjectPage();
     }
 }
 
@@ -67,7 +72,6 @@ function closeProjectPage() {
     document.getElementById("unreal-engine-page").hidden = true;
     document.getElementById("game-maker-page").hidden = true;
     document.getElementById("ableton-live-page").hidden = true;
-    document.getElementById("changelogs-page").hidden = true;
 }
 
 function openProjectPage(projectPage) {
@@ -92,7 +96,7 @@ function openProjectPage(projectPage) {
         document.getElementById("game-maker-page").hidden = false;
     } else if (projectPage == "ableton live") {
         document.getElementById("ableton-live-page").hidden = false;
-    } else if(projectPage == "changelogs") {
+    } else if (projectPage == "changelogs") {
         document.getElementById("changelogs-page").hidden = false;
     }
 }
@@ -177,5 +181,35 @@ function projectNavBarChange(selection, elementID) {
     } else if (selection == "images") {
         projectImagesSection.hidden = false;
         navProjectImages.classList = "nav-link active nav-project-images";
+    }
+}
+
+function changelogPageChange(selection) {
+    aevumPage = document.getElementById("aevum_changelog");
+    grovePage = document.getElementById("grove_changelog");
+    athenaeumPage = document.getElementById("athenaeum_changelog");
+
+    aevumChangelogButton = document.getElementById("aevum-changelog-button");
+    groveChangelogButton = document.getElementById("grove-changelog-button");
+    athenaeumChangelogButton = document.getElementById("athenaeum-changelog-button");
+
+    aevumPage.hidden = true;
+    grovePage.hidden = true;
+    athenaeumPage.hidden = true;
+
+    aevumChangelogButton.classList = "nav-link";
+    groveChangelogButton.classList = "nav-link";
+    athenaeumChangelogButton.classList = "nav-link";
+
+    if (selection == "aevum") {
+        aevumPage.hidden = false;
+        aevumChangelogButton.classList = "nav-link active";
+        console.log("test")
+    } else if (selection == "grove") {
+        grovePage.hidden = false;
+        groveChangelogButton.classList = "nav-link active";
+    } else if (selection == "athenaeum") {
+        athenaeumPage.hidden = false;
+        athenaeumChangelogButton.classList = "nav-link active";
     }
 }
