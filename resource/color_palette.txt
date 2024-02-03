@@ -1,12 +1,7 @@
-- Color Palette -
-Gothic Bit Palette by HiroHi
-https://lospec.com/palette-list/gothic-bit
 
-#0e0e12
-#1a1a24
-#333346
-#535373
-#8080a4
-#a6a6bf
-#c1c1d2
-#e6e6ec
+#9fe8ff
+#74bff8
+#6aa3cc
+#517184
+#364e5e
+#000000
