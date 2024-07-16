@@ -23,16 +23,16 @@
 
 <body data-bs-theme="dark">
     <div class="container">
-        <div class="row">
+        <div  class="row">
             <div class="col-4">
                 <div>
                     <img style="width: 64px; position: absolute; z-index: -1; opacity: 0.5;" src="img/dots.png">
-                    <img style="margin-left: 64px; width: 64px; position: absolute; z-index: -1; opacity: 0.5;" src="img/dots.png">
-                    <img style="margin-left: 128px; width: 64px; position: absolute; z-index: -1; opacity: 0.35;" src="img/dots.png">
-                    <img style="margin-left: 192px; width: 64px; position: absolute; z-index: -1; opacity: 0.25;" src="img/dots.png">
-                    <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.1;" src="img/dots.png">
+                    <img style="margin-left: 64px; width: 64px; position: absolute; z-index: -1; opacity: 0.25;" src="img/dots.png">
+                    <img style="margin-left: 128px; width: 64px; position: absolute; z-index: -1; opacity: 0.15;" src="img/dots.png">
+                    <img style="margin-left: 192px; width: 64px; position: absolute; z-index: -1; opacity: 0.1;" src="img/dots.png">
+                    <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.05;" src="img/dots.png">
                 </div>
-                <h1>Brian Duncan II</h1>
+                <h1 style="margin-left: 0.25em; text-shadow: 0em 0.1em black;">Brian Duncan II</h1>
                 <div style="margin-top: 1em;" id="morphing-text"><span></span></div>
                 <hr>
                 <div style="margin-top: 2em;">
@@ -58,16 +58,120 @@
                             class="fa-brands fa-github"></i></button>
                 </div>
             </div>
-            <div style="margin-top: 7.5em;" class="col">
+            <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
                 <h3><i class="fa-solid fa-circle-user"></i> About Me</h3>
                 <hr>
                 <h3><i class="fa-solid fa-lightbulb"></i> Skills</h3>
                 <hr>
-                <h3><i class="fa-solid fa-palette"></i> Projects</h3>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5><i class="fa-brands fa-html5"></i> HTML/CSS</h5>
+                              <p>4 Years Experience</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                              <h5><i class="fa-brands fa-js"></i> Javascript</h5>
+                              <p>4 Years Experience</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 1em;" class="row">
+                        <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                <h5>Unreal Engine (Visual Scripting)</h5>
+                                <p>3 Years Experience</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                <h5>Game Maker: Studio</h5>
+                                <p>6 Years Experience</p>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div style="margin-top: 1em;" class="row">
+                        <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                <h5>Ableton Live</h5>
+                                <p>3 Years Experience</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card">
+                              <div class="card-body">
+                                <h5>Sony Vegas Pro</h5>
+                                <p>6 Years Experience</p>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                <h3 style="margin-top: 1em;"><i class="fa-solid fa-palette"></i> Projects</h3>
                 <hr>
-                <h3><i class="fa-solid fa-paper-plane"></i> Contact</h3>
+                <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><img src="img/unreal-engine-icon.png" style="width: 32px; margin-right: 0.5em;">Aevum</h5>
+                              <p class="card-text">A fast-paced FPS retro shooter made in Unreal Engine 4.</p>
+                              <button type="button" class="btn btn-outline-secondary">Details</button>
+
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><img src="img/game-maker-icon.png" style="width: 32px; margin-right: 0.5em;">Query</h5>
+                              <p class="card-text">An abstract dream world exploration game. Made in Game Maker: Studio.</p>
+                              <button type="button" class="btn btn-outline-secondary">Details</button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div style="margin-top: 3em;" class="row">
+                        <div class="col">
+                          <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title"><img src="img/unreal-engine-icon.png" style="width: 32px; margin-right: 0.5em;">Chimerion</h5>
+                                <p class="card-text">A roguelike dungeon crawler. Made in Unreal Engine 5.</p>
+                                <button type="button" class="btn btn-outline-secondary">Details</button>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                          <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                              <img src="..." class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Grove</h5>
+                                <p class="card-text">An incremental plant game. Made with Javascript.</p>
+                                <button type="button" class="btn btn-outline-secondary">Details</button>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                <h3 style="margin-top: 1em;"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
                 <hr>
-                <div class="card">
+                <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                     <div class="card-body">
                           <div class="container text-center">
                             <div class="row">
@@ -122,7 +226,8 @@
         '<i class="fas fa-code"></i> Front-End Developer',
         '<i class="fas fa-gamepad"></i> Game Developer',
         '<i class="fas fa-music"></i> Music Producer',
-        '<i class="fas fa-headphones"></i> Sound Designer'
+        '<i class="fas fa-headphones"></i> Sound Designer',
+        '<i class="fa-solid fa-camera"></i> Video Editor'
     ];
     let currentIndex = 0;
 
