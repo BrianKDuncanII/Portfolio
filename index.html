@@ -37,25 +37,25 @@
                 <hr>
                 <div>
                     <div>
-                    <a href="#">
+                    <a style="width: 8em;" href="#about-me">
                         <h5><i class="fa-solid fa-caret-right"></i> About Me</h5>
                     </a>
                     </div>
                     <div>
-                    <a href="#">
+                    <a style="width: 8em;" href="#skills">
                         <h5><i class="fa-solid fa-caret-right"></i> Skills</h5>
                     </a>
                     </div>
                     <div>
-                    <a href="#">
+                    <a style="width: 8em;" href="#projects">
                         <h5><i class="fa-solid fa-caret-right"></i> Projects</h5>
                     </a>
                     </div>
-                    <a href="#">
+                    <a style="width: 8em;" href="#contact">
                         <h5><i class="fa-solid fa-caret-right"></i> Contact</h5>
                     </a>
                 </div>
-                <button id="resume-download" style="margin-top: 2em;" type="button" class="btn btn-outline-info"><i
+                <button id="resume-download" style="margin-top: 2em; border-color: rgb(89, 140, 206); color: rgb(89, 140, 206);" type="button" class="btn btn-outline-info"><i
                         class="fa-solid fa-file-arrow-down"></i> Resume</button>
                 <div style="margin-top: 1em;">
                     <button id="social-linkedin" type="button" class="btn btn-outline-secondary"
@@ -65,16 +65,16 @@
                 </div>
             </div>
             <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
-                <h3><i class="fa-solid fa-circle-user"></i> About Me</h3>
+                <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
                 <hr>
-                <h3><i class="fa-solid fa-lightbulb"></i> Skills</h3>
+                <h3 id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
                 <hr>
                 <div class="container">
                     <div class="row">
                       <div class="col">
                         <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                             <div class="card-body">
-                              <h5><i class="fa-brands fa-html5"></i> HTML/CSS</h5>
+                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-2x"></i> HTML/CSS</h5>
                               <p>4 Years Experience</p>
                             </div>
                           </div>
@@ -82,8 +82,27 @@
                       <div class="col">
                         <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                             <div class="card-body">
-                              <h5><i class="fa-brands fa-js"></i> Javascript</h5>
+                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-2x"></i> Javascript</h5>
                               <p>4 Years Experience</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div style="margin-top: 1em;" class="row">
+                      <div class="col">
+                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                            <div class="card-body">
+                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-2x"></i> Java</h5>
+                              <p>2 Years Experience</p>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                            <div class="card-body">
+                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-2x"></i> SQL</h5>
+                              <p>1 Year Experience</p>
                             </div>
                           </div>
                       </div>
@@ -93,7 +112,7 @@
                         <div class="col">
                           <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                               <div class="card-body">
-                                <h5>Unreal Engine (Visual Scripting)</h5>
+                                <h5>Unreal Engine (Visual Script)</h5>
                                 <p>3 Years Experience</p>
                               </div>
                             </div>
@@ -126,7 +145,7 @@
                         </div>
                       </div>
                   </div>
-                <h3 style="margin-top: 1em;"><i class="fa-solid fa-palette"></i> Projects</h3>
+                <h3 id="projects" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-palette"></i> Projects</h3>
                 <hr>
                 <div class="container">
                     <div class="row">
@@ -167,7 +186,7 @@
                           <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
                               <img src="..." class="card-img-top" alt="...">
                               <div class="card-body">
-                                <h5 class="card-title">Grove</h5>
+                                <h5 class="card-title"><i class="fa-brands fa-js"></i> Grove</h5>
                                 <p class="card-text">An incremental plant game. Made with Javascript.</p>
                                 <button type="button" class="btn btn-outline-secondary">Details</button>
                               </div>
@@ -175,7 +194,7 @@
                         </div>
                       </div>
                   </div>
-                <h3 style="margin-top: 1em;"><i class="fa-solid fa-paper-plane"></i> Contact</h3>
+                <h3 id="contact" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-paper-plane"></i> Contact</h3>
                 <hr>
                 <div class="card" style="background-color: rgba(0, 0, 0, 0.219); margin-bottom: 1em;">
                     <div class="card-body">
@@ -233,11 +252,11 @@
 
 <script>
     const skills = [
-        '<i class="fas fa-code"></i> Front-End Developer',
-        '<i class="fas fa-gamepad"></i> Game Developer',
-        '<i class="fas fa-music"></i> Music Producer',
-        '<i class="fas fa-headphones"></i> Sound Designer',
-        '<i class="fa-solid fa-camera"></i> Video Editor'
+        '<p id="skills-counter"><i class="fas fa-code"></i> Front-End Developer</p>',
+        '<p id="skills-counter"><i class="fas fa-gamepad"></i> Game Developer</p>',
+        '<p id="skills-counter"><i class="fas fa-music"></i> Music Producer</p>',
+        '<p id="skills-counter"><i class="fas fa-headphones"></i> Sound Designer</p>',
+        '<p id="skills-counter"><i class="fa-solid fa-camera"></i> Video Editor</p>'
     ];
     let currentIndex = 0;
 
