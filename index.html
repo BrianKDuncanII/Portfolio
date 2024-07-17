@@ -1,284 +1,351 @@
 <!DOCTYPE html>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
 
-    <!-- Development -->
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+  <!-- Development -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <script src="https://kit.fontawesome.com/a636e71e2c.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a636e71e2c.js" crossorigin="anonymous"></script>
 
-    <!-- replace x.x.x with actual version -->
-    <script src="https://unpkg.com/@codersrank/activity@x.x.x/codersrank-activity.min.js"></script>
+  <!-- replace x.x.x with actual version -->
+  <script src="https://unpkg.com/@codersrank/activity@x.x.x/codersrank-activity.min.js"></script>
 
-    <title>Brian Duncan II</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
+
+  <title>Brian Duncan II</title>
 </head>
 
 <body data-bs-theme="dark">
-    <div class="container">
-        <div  class="row">
-            <div class="col-4">
-                <div>
-                    <img style="width: 64px; position: absolute; z-index: -1; opacity: 0.5;" src="img/dots.png">
-                    <img style="margin-left: 64px; width: 64px; position: absolute; z-index: -1; opacity: 0.25;" src="img/dots.png">
-                    <img style="margin-left: 128px; width: 64px; position: absolute; z-index: -1; opacity: 0.15;" src="img/dots.png">
-                    <img style="margin-left: 192px; width: 64px; position: absolute; z-index: -1; opacity: 0.1;" src="img/dots.png">
-                    <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.05;" src="img/dots.png">
-                </div>
-                <h1 style="margin-left: 0.25em; text-shadow: 0em 0.1em black;">Brian Duncan II</h1>
-                <div style="margin-top: 1em;" id="morphing-text"><span></span></div>
-                <hr>
-                <div>
-                    <div>
-                    <a style="width: 8em;" href="#about-me">
-                        <h5><i class="fa-solid fa-caret-right"></i> About Me</h5>
-                    </a>
-                    </div>
-                    <div>
-                    <a style="width: 8em;" href="#skills">
-                        <h5><i class="fa-solid fa-caret-right"></i> Skills</h5>
-                    </a>
-                    </div>
-                    <div>
-                    <a style="width: 8em;" href="#projects">
-                        <h5><i class="fa-solid fa-caret-right"></i> Projects</h5>
-                    </a>
-                    </div>
-                    <a style="width: 8em;" href="#contact">
-                        <h5><i class="fa-solid fa-caret-right"></i> Contact</h5>
-                    </a>
-                </div>
-                <button id="resume-download" style="margin-top: 2em; border-color: rgb(89, 140, 206); color: rgb(89, 140, 206);" type="button" class="btn btn-outline-info"><i
-                        class="fa-solid fa-file-arrow-down"></i> Resume</button>
-                <div style="margin-top: 1em;">
-                    <button id="social-linkedin" type="button" class="btn btn-outline-secondary"
-                        style="margin-right: 1em;"><i class="fa-brands fa-linkedin-in"></i></button>
-                    <button id="social-github" type="button" class="btn btn-outline-secondary"><i
-                            class="fa-brands fa-github"></i></button>
-                </div>
-            </div>
-            <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
-                <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
-                <hr>
-                <h3 id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                            <div class="card-body">
-                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-2x"></i> HTML/CSS</h5>
-                              <p>4 Years Experience</p>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                            <div class="card-body">
-                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-2x"></i> Javascript</h5>
-                              <p>4 Years Experience</p>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div style="margin-top: 1em;" class="row">
-                      <div class="col">
-                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                            <div class="card-body">
-                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-2x"></i> Java</h5>
-                              <p>2 Years Experience</p>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                            <div class="card-body">
-                              <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-2x"></i> SQL</h5>
-                              <p>1 Year Experience</p>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-
-                    <div style="margin-top: 1em;" class="row">
-                        <div class="col">
-                          <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                              <div class="card-body">
-                                <h5>Unreal Engine (Visual Script)</h5>
-                                <p>3 Years Experience</p>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                          <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                              <div class="card-body">
-                                <h5>Game Maker: Studio</h5>
-                                <p>6 Years Experience</p>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div style="margin-top: 1em;" class="row">
-                        <div class="col">
-                          <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                              <div class="card-body">
-                                <h5>Ableton Live</h5>
-                                <p>3 Years Experience</p>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                          <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                              <div class="card-body">
-                                <h5>Sony Vegas Pro</h5>
-                                <p>6 Years Experience</p>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                  </div>
-                <h3 id="projects" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-palette"></i> Projects</h3>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title"><img src="img/unreal-engine-icon.png" style="width: 32px; margin-right: 0.5em;">Aevum</h5>
-                              <p class="card-text">A fast-paced FPS retro shooter made in Unreal Engine 4.</p>
-                              <button type="button" class="btn btn-outline-secondary">Details</button>
-
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col">
-                        <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title"><img src="img/game-maker-icon.png" style="width: 32px; margin-right: 0.5em;">Query</h5>
-                              <p class="card-text">An abstract dream world exploration game. Made in Game Maker: Studio.</p>
-                              <button type="button" class="btn btn-outline-secondary">Details</button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div style="margin-top: 3em;" class="row">
-                        <div class="col">
-                          <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
-                              <img src="..." class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title"><img src="img/unreal-engine-icon.png" style="width: 32px; margin-right: 0.5em;">Chimerion</h5>
-                                <p class="card-text">A roguelike dungeon crawler. Made in Unreal Engine 5.</p>
-                                <button type="button" class="btn btn-outline-secondary">Details</button>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                          <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
-                              <img src="..." class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title"><i class="fa-brands fa-js"></i> Grove</h5>
-                                <p class="card-text">An incremental plant game. Made with Javascript.</p>
-                                <button type="button" class="btn btn-outline-secondary">Details</button>
-                              </div>
-                            </div>
-                        </div>
-                      </div>
-                  </div>
-                <h3 id="contact" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-paper-plane"></i> Contact</h3>
-                <hr>
-                <div class="card" style="background-color: rgba(0, 0, 0, 0.219); margin-bottom: 1em;">
-                    <div class="card-body">
-                          <div class="container text-center">
-                            <div class="row">
-                              <div class="col">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
-                                  </div>
-                              </div>
-                              <div class="col">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon1">
-                                  </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                  <div class="input-group mb-3">
-                                      <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="col">
-                                  <div class="input-group mb-3">
-                                      <input type="text" class="form-control" placeholder="Phone" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col">
-                                  <div class="input-group mb-3">
-                                      <input type="text" class="form-control" placeholder="Company Name" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col">
-                                    <div class="input-group">
-                                        <textarea placeholder="Your message..." class="form-control" aria-label="With textarea"></textarea>
-                                      </div>
-                                </div>
-                              </div>
-                              <button style="margin-top: 1em;" type="button" class="btn btn-primary">Submit</button>
-                          </div>
-                    </div>
-                  </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div>
+          <img style="width: 64px; position: absolute; z-index: -1; opacity: 0.5;" src="img/dots.png">
+          <img style="margin-left: 64px; width: 64px; position: absolute; z-index: -1; opacity: 0.25;"
+            src="img/dots.png">
+          <img style="margin-left: 128px; width: 64px; position: absolute; z-index: -1; opacity: 0.15;"
+            src="img/dots.png">
+          <img style="margin-left: 192px; width: 64px; position: absolute; z-index: -1; opacity: 0.1;"
+            src="img/dots.png">
+          <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.05;"
+            src="img/dots.png">
         </div>
-    </div>
+        <h1 style="margin-left: 0.25em; text-shadow: 0em 0.1em black;">Brian Duncan II</h1>
+        <div style="margin-top: 1em;" id="morphing-text"><span></span></div>
+        <hr>
+        <div>
+          <div>
+            <a style="width: 8em;" href="#about-me">
+              <h5><i class="fa-solid fa-caret-right"></i> About Me</h5>
+            </a>
+          </div>
+          <div>
+            <a style="width: 8em;" href="#skills">
+              <h5><i class="fa-solid fa-caret-right"></i> Skills</h5>
+            </a>
+          </div>
+          <div>
+            <a style="width: 8em;" href="#projects">
+              <h5><i class="fa-solid fa-caret-right"></i> Projects</h5>
+            </a>
+          </div>
+          <a style="width: 8em;" href="#contact">
+            <h5><i class="fa-solid fa-caret-right"></i> Contact</h5>
+          </a>
+        </div>
+        <button id="resume-download" style="margin-top: 2em; border-color: rgb(89, 140, 206); color: rgb(89, 140, 206);"
+          type="button" class="btn btn-outline-info"><i class="fa-solid fa-file-arrow-down"></i> Resume</button>
+        <div style="margin-top: 1em;">
+          <button id="social-linkedin" type="button" class="btn btn-outline-secondary" style="margin-right: 1em;"><i
+              class="fa-brands fa-linkedin-in"></i></button>
+          <button id="social-github" type="button" class="btn btn-outline-secondary"><i
+              class="fa-brands fa-github"></i></button>
+        </div>
+        <hr>
+        <p style="margin-top: 1em; opacity: 0.5;">2024 | Made with <i style="color: rgb(89, 140, 206);" class="fa-solid fa-mug-hot"></i> by Brian Duncan II</p>
+      </div>
+      <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
+        <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
+        <hr>
+        <h3 id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-2x"></i>
+                    HTML/CSS</h5>
+                  <p>4 Years Experience</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-2x"></i> Javascript
+                  </h5>
+                  <p>4 Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <footer>
-        <p>2024 | Made with <i class="fa-solid fa-heart"></i> by Brian Duncan II</p>
-    </footer>
+          <div style="margin-top: 1em;" class="row">
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-2x"></i> Java
+                  </h5>
+                  <p>2 Years Experience</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-2x"></i> SQL
+                  </h5>
+                  <p>1 Year Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1em;" class="row">
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5>Unreal Engine (Visual Script)</h5>
+                  <p>3 Years Experience</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5>Game Maker: Studio</h5>
+                  <p>6 Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 1em;" class="row">
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5>Ableton Live</h5>
+                  <p>3 Years Experience</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5>Sony Vegas Pro</h5>
+                  <p>6 Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 1em;" class="row">
+            <div class="col">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
+                <div class="card-body">
+                  <h5>Other Skills</h5>
+                  <ul>
+                    <li>Customer Service</li>
+                    <li>Merchandising</li>
+                    <li>Social Media Marketing</li>
+                  </ul>
+                  <h5>Languages</h5>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">
+                        <div style="background-color: rgba(0, 0, 0, 0.219); height: 125px;" class="card">
+                          <div class="card-body">
+                            <h5>English <span class="fi fi-gb"></span></h5>
+                            <p>Native Speaker</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div style="background-color: rgba(0, 0, 0, 0.219); height: 125px;" class="card">
+                          <div class="card-body">
+                            <h5>Japanese <span class="fi fi-jp"></span></h5>
+                            <p>Beginner Speaking/Writing</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div style="background-color: rgba(0, 0, 0, 0.219); height: 125px;" class="card">
+                          <div class="card-body">
+                            <h5>Russian <span class="fi fi-ru"></span></h5>
+                            <p>Beginner Speaking/Writing</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 id="projects" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-palette"></i>
+          Projects</h3>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><img src="img/unreal-engine-icon.png"
+                      style="width: 32px; margin-right: 0.5em;">Aevum</h5>
+                  <p class="card-text">A fast-paced FPS retro shooter made in Unreal Engine 4.</p>
+                  <button type="button" class="btn btn-outline-secondary">Details</button>
+
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><img src="img/game-maker-icon.png"
+                      style="width: 32px; margin-right: 0.5em;">Query</h5>
+                  <p class="card-text">An abstract dream world exploration game. Made in Game Maker: Studio.</p>
+                  <button type="button" class="btn btn-outline-secondary">Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 3em;" class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><img src="img/unreal-engine-icon.png"
+                      style="width: 32px; margin-right: 0.5em;">Chimerion</h5>
+                  <p class="card-text">A roguelike dungeon crawler. Made in Unreal Engine 5.</p>
+                  <button type="button" class="btn btn-outline-secondary">Details</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-js"></i> Grove</h5>
+                  <p class="card-text">An incremental plant game. Made with Javascript.</p>
+                  <button type="button" class="btn btn-outline-secondary">Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 id="contact" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);"
+            class="fa-solid fa-paper-plane"></i> Contact</h3>
+        <hr>
+        <p>Feel free to send me a message if you'd like to get in touch!</p>
+        <div class="card" style="background-color: rgba(0, 0, 0, 0.219); margin-bottom: 1em;">
+          <div class="card-body">
+            <div class="container text-center">
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Email" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Phone (Optional)" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Company Name (Optional)" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group">
+                    <textarea placeholder="Your message..." class="form-control" aria-label="With textarea"></textarea>
+                  </div>
+                </div>
+              </div>
+              <button style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
+                type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 <script>
-    const skills = [
-        '<p id="skills-counter"><i class="fas fa-code"></i> Front-End Developer</p>',
-        '<p id="skills-counter"><i class="fas fa-gamepad"></i> Game Developer</p>',
-        '<p id="skills-counter"><i class="fas fa-music"></i> Music Producer</p>',
-        '<p id="skills-counter"><i class="fas fa-headphones"></i> Sound Designer</p>',
-        '<p id="skills-counter"><i class="fa-solid fa-camera"></i> Video Editor</p>'
-    ];
-    let currentIndex = 0;
+  const skills = [
+    '<p id="skills-counter"><i class="fas fa-code"></i> Front-End Developer</p>',
+    '<p id="skills-counter"><i class="fas fa-gamepad"></i> Game Developer</p>',
+    '<p id="skills-counter"><i class="fas fa-music"></i> Music Producer</p>',
+    '<p id="skills-counter"><i class="fas fa-headphones"></i> Sound Designer</p>',
+    '<p id="skills-counter"><i class="fa-solid fa-camera"></i> Video Editor</p>'
+  ];
+  let currentIndex = 0;
 
-    function morphText() {
-        const textElement = document.querySelector('#morphing-text span');
+  function morphText() {
+    const textElement = document.querySelector('#morphing-text span');
 
-        textElement.classList.add('fade');
+    textElement.classList.add('fade');
 
-        setTimeout(() => {
-            textElement.innerHTML = skills[currentIndex];
+    setTimeout(() => {
+      textElement.innerHTML = skills[currentIndex];
 
-            void textElement.offsetWidth;
+      void textElement.offsetWidth;
 
-            textElement.classList.remove('fade');
+      textElement.classList.remove('fade');
 
-            currentIndex = (currentIndex + 1) % skills.length;
+      currentIndex = (currentIndex + 1) % skills.length;
 
-            setTimeout(morphText, 2000);
-        }, 500);
-    }
+      setTimeout(morphText, 2000);
+    }, 500);
+  }
 
-    morphText();
+  morphText();
 </script>
 
 <script src="js/main.js"></script>
