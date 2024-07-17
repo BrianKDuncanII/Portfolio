@@ -37,5 +37,28 @@ function createShape(side) {
     shape.addEventListener('animationend', () => shape.remove());
   }
   
-  setInterval(() => createShape('left'), 2000);
-  setInterval(() => createShape('right'), 2000);
+  setInterval(() => createShape('left'), 5000);
+  setInterval(() => createShape('right'), 5000);
+
+  GitHubActivity.feed({
+    username: "BrianKDuncanII",
+    selector: "#feed",
+    limit: 5, // optional
+  });
+
+function toggleGithubActivity() {
+    if(document.getElementById("feed-container").hidden) {
+        document.getElementById("feed-container").hidden = false;
+        document.getElementById("github-toggle-button").innerHTML = "Hide";
+    } else {
+        document.getElementById("feed-container").hidden = true;
+        document.getElementById("github-toggle-button").innerHTML = "Show";
+    }
+}
+
+function submitEmail() {
+    toast = document.getElementById("confirmationToast");
+    toast.classList.add("show");
+    setTimeout(() => toast.classList.remove("show"), 5000);
+    document.getElementById("confirmation-text").hidden = false;
+}

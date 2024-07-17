@@ -14,6 +14,12 @@ p, h5, h4, h3, h2, h1 {
     pointer-events: none;
 }
 
+#feed {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 40em;
+}
+
 a:hover {
     color: rgb(112, 174, 255);
     margin-left: 0.05em;

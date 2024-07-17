@@ -23,11 +23,20 @@
   <!-- Responsive meta-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="stylesheet" href="https://unpkg.com/octicons@4.4.0/build/font/octicons.css">
+  <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
+
+  <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
+
+  <!-- if using dark theme add this in addition to the main CSS file -->
+  <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
 
   <title>Brian Duncan II</title>
 </head>
 
 <body data-bs-theme="dark">
+
   <div class="falling-shapes left"></div>
   <div class="falling-shapes right"></div>
 
@@ -77,7 +86,12 @@
               class="fa-brands fa-github"></i></button>
         </div>
         <hr>
-        <p style="margin-top: 1em; opacity: 0.5;">2024 | Made with <i style="color: rgb(89, 140, 206);" class="fa-solid fa-mug-hot"></i> by Brian Duncan II</p>
+        <p style="margin-top: 1em; opacity: 0.5; margin-bottom: 2em;">2024 | Made with <i style="color: rgb(89, 140, 206);" class="fa-solid fa-mug-hot"></i> by Brian Duncan II</p>
+        <h5 style="margin-top: 2em; display: inline;"><i style="color: rgb(89, 140, 206);" class="fa-brands fa-github-alt"></i> Github Activity</h5><button id="github-toggle-button" onclick="toggleGithubActivity()" style="margin-left: 1em;" type="button" class="btn btn-outline-light">Show</button>
+        <div id="feed-container" hidden>
+          <hr>
+          <div id="feed"></div>
+        </div>
       </div>
       <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
         <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
@@ -256,7 +270,7 @@
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><img src="img/unreal-engine-icon.png"
-                      style="width: 32px; margin-right: 0.5em;">Chimerion</h5>
+                      style="width: 32px; margin-right: 0.5em;">The Venusian Tower</h5>
                   <p class="card-text">A roguelike dungeon crawler. Made in Unreal Engine 5.</p>
                   <button type="button" class="btn btn-outline-secondary">Details</button>
                 </div>
@@ -267,6 +281,18 @@
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><i class="fa-brands fa-js"></i> Grove</h5>
+                  <p class="card-text">An incremental plant game. Made with Javascript.</p>
+                  <button type="button" class="btn btn-outline-secondary">Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 3em;" class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="fa-brands fa-js"></i> A Darkest Heart</h5>
                   <p class="card-text">An incremental plant game. Made with Javascript.</p>
                   <button type="button" class="btn btn-outline-secondary">Details</button>
                 </div>
@@ -284,27 +310,13 @@
               <div class="row">
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="First Name" aria-label="Username"
                       aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Phone (Optional)" aria-label="Username"
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Last Name" aria-label="Username"
                       aria-describedby="basic-addon1">
                   </div>
                 </div>
@@ -312,7 +324,21 @@
               <div class="row">
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Company Name (Optional)" aria-label="Username"
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Email" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Phone (Optional)" aria-label="Username"
+                      aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Company Name (Optional)" aria-label="Username"
                       aria-describedby="basic-addon1">
                   </div>
                 </div>
@@ -320,11 +346,12 @@
               <div class="row">
                 <div class="col">
                   <div class="input-group">
-                    <textarea placeholder="Your message..." class="form-control" aria-label="With textarea"></textarea>
+                    <textarea style="background-color: rgba(0, 0, 0, 0.219);" placeholder="Your message..." class="form-control" aria-label="With textarea"></textarea>
                   </div>
                 </div>
               </div>
-              <button style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
+              <p id="confirmation-text" style="margin-bottom: -0.5em; color: rgb(0, 216, 0); text-shadow:rgb(0, 216, 0) 0em 0em 0.5em;" hidden><i class="fa-solid fa-paper-plane"></i> Your message has been sent!</p>
+              <button onclick="submitEmail()" style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
                 type="button" class="btn btn-primary">Submit</button>
             </div>
           </div>
@@ -366,3 +393,12 @@
 </script>
 
 <script src="js/main.js"></script>
+
+<div id="confirmationToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Thank you for your message! I'll get back to you as soon as I can.
+    </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
