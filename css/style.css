@@ -145,3 +145,18 @@ a {
       transform: translateY(100vh) rotate(360deg);
     }
   }
+
+  /* Your regular navbar styles here */
+#side-navbar {
+    /* Your existing styles */
+}
+
+/* Hide the navbar on screens smaller than 768px (typical tablet width) */
+@media screen and (max-width: 1000px) {
+    #side-navbar {
+        display: none;
+    }
+    .falling-shapes {
+        display: none;
+    }
+}
