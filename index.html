@@ -27,7 +27,8 @@
   <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.css">
 
   <script type="text/javascript" src="https://unpkg.com/mustache@4.2.0/mustache.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/github-activity-feed@latest/dist/github-activity.min.js">
+  </script>
 
   <!-- if using dark theme add this in addition to the main CSS file -->
   <link rel="stylesheet" href="https://unpkg.com/github-activity-feed@latest/dist/github-activity.dark.min.css">
@@ -54,7 +55,7 @@
           <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.05;"
             src="img/dots.png">
         </div>
-        <h1 style="margin-left: 0.25em; text-shadow: 0em 0.1em black;">Brian Duncan II</h1>
+        <h1 id="name-title" style="margin-left: 0.25em;">Brian Duncan II</h1>
         <div style="margin-top: 1em;" id="morphing-text"><span></span></div>
         <hr>
         <div>
@@ -76,12 +77,12 @@
           <a style="width: 8em;" href="#contact">
             <h5><i class="fa-solid fa-caret-right"></i> Contact</h5>
           </a>
-          <div>
+          <div hidden>
             <a id="showcase-button" style="width: 8em;" href="#">
               <h5><i class="fa-solid fa-caret-right"></i> Showcase</h5>
             </a>
           </div>
-          
+
         </div>
         <button id="resume-download" style="margin-top: 2em; border-color: rgb(89, 140, 206); color: rgb(89, 140, 206);"
           type="button" class="btn btn-outline-info"><i class="fa-solid fa-file-arrow-down"></i> Resume</button>
@@ -92,35 +93,60 @@
               class="fa-brands fa-github"></i></button>
         </div>
         <hr>
-        <p style="margin-top: 1em; opacity: 0.5; margin-bottom: 2em;">2024 | Made with <i style="color: rgb(89, 140, 206);" class="fa-solid fa-mug-hot"></i> by Brian Duncan II</p>
-        <h5 style="margin-top: 2em; display: inline;"><i style="color: rgb(89, 140, 206);" class="fa-brands fa-github-alt"></i> Github Activity</h5><button id="github-toggle-button" onclick="toggleGithubActivity()" style="margin-left: 1em;" type="button" class="btn btn-outline-light">Show</button>
+        <p style="margin-top: 1em; opacity: 0.5; margin-bottom: 2em;">2024 | Made with <i
+            style="color: rgb(89, 140, 206);" class="fa-solid fa-mug-hot"></i> by Brian Duncan II</p>
+        <h5 style="margin-top: 2em; display: inline;"><i style="color: rgb(89, 140, 206);"
+            class="fa-brands fa-github-alt"></i> Github Activity</h5><button id="github-toggle-button"
+          onclick="toggleGithubActivity()" style="margin-left: 1em;" type="button"
+          class="btn btn-outline-light">Show</button>
         <div id="feed-container" hidden>
           <hr>
           <div id="feed"></div>
         </div>
       </div>
-      <div style="overflow:scroll; overflow-x: hidden; max-height: 75em;" style="margin-top: 7.5em;" class="col">
+      <div
+        style="overflow:scroll; overflow-x: hidden; max-height: 75em; scrollbar-width: thin; scrollbar-color: rgb(89, 140, 206) rgba(0, 0, 0, 0.219);"
+        style="margin-top: 7.5em;" class="col">
         <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
         <hr>
-        <h3 id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
+        <h3 style="margin-top: 3em;" id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
         <hr>
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-2x"></i>
-                    HTML/CSS</h5>
-                  <p>4 Years Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-3x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>HTML/CSS</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <p>4 Years Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-2x"></i> Javascript
-                  </h5>
-                  <p>4 Years Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-3x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>Javascript</h5>
+                      </div>
+                    </div>
+
+                    <hr>
+                    <p>4 Years Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,18 +156,36 @@
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-2x"></i> Java
-                  </h5>
-                  <p>2 Years Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-3x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>Java</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <p>2 Years Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5><i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-2x"></i> SQL
-                  </h5>
-                  <p>1 Year Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-3x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>SQL</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <p>1 Year Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -151,39 +195,44 @@
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5>Unreal Engine (Visual Script)</h5>
-                  <p>3 Years Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-gamepad fa-2x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>Game Engines</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <p>Unreal Engine - 4 Years Experience</p>
+                    <p>Unity - 2 Years Experience</p>
+                    <p>Game Maker: Studio - 8 Years Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
-                  <h5>Game Maker: Studio</h5>
-                  <p>6 Years Experience</p>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-3">
+                        <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-sliders fa-3x"></i>
+                      </div>
+                      <div class="col">
+                        <h5>Music Production</h5>
+                      </div>
+                    </div>
+                    <hr>
+                    <p>Ableton Live - 3 Years Experience</p>
+                    <p>FL Studio - 1 Year Experience</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div style="margin-top: 1em;" class="row">
-            <div class="col">
-              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                <div class="card-body">
-                  <h5>Ableton Live</h5>
-                  <p>3 Years Experience</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
-                <div class="card-body">
-                  <h5>Sony Vegas Pro</h5>
-                  <p>6 Years Experience</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style="margin-top: 1em;" class="row">
+          <div style="margin-top: 1em; margin-bottom: 5em;" class="row">
             <div class="col">
               <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <div class="card-body">
@@ -240,101 +289,126 @@
           </div>
         </div>
         <div style="margin-top: 1em;">
-            <h3 id="projects" style=" display: inline; margin-right: 1em;"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-palette"></i>
-              Projects</h3>
-              <input type="checkbox" class="btn-check" id="btn-check-1" checked autocomplete="off">
-              <label class="btn" for="btn-check-1">Unreal Engine</label>
-              
-              <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
-              <label class="btn" for="btn-check-2">Game Maker</label>
+          <h3 id="projects" style="display: inline; margin-right: 1em;"><i style="color: rgb(89, 140, 206);"
+              class="fa-solid fa-palette"></i>
+            Projects</h3>
+          <input type="checkbox" class="btn-check" id="btn-check-1" checked autocomplete="off">
+          <label class="btn" for="btn-check-1">Unreal Engine</label>
 
-              <input type="checkbox" class="btn-check" id="btn-check-3" checked autocomplete="off">
-              <label class="btn" for="btn-check-3">HTML/JS</label>
+          <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+          <label class="btn" for="btn-check-2">Game Maker</label>
+
+          <input type="checkbox" class="btn-check" id="btn-check-3" checked autocomplete="off">
+          <label class="btn" for="btn-check-3">HTML/JS</label>
         </div>
         <hr>
-        <div class="container">
+        <div class="container text-center">
           <div class="row">
             <div class="col">
-              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><img src="img/unreal-engine-icon.png"
-                      style="width: 32px; margin-right: 0.5em;">Aevum</h5>
+                  <img src="img/unreal-engine-icon.png" style="width: 32px;">
+                  <h5 class="card-title">Aevum</h5>
+
                   <p class="card-text">A fast-paced FPS retro shooter made in Unreal Engine 4.</p>
                   <div>
-                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i><p style="display: inline;"> Downloadable Demo</p>
+                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i>
+                    <p style="display: inline;"> Downloadable Demo</p>
                   </div>
                   <button style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
-                  <button style="margin-top: 1em; color: rgb(112, 174, 255);" type="button" class="btn btn-outline-secondary disabled"><i class="fa-solid fa-circle-down"></i> Demo</button>
+                  <button style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
+                    class="btn btn-outline-secondary disabled"><i class="fa-solid fa-circle-down"></i> Demo</button>
 
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><img src="img/game-maker-icon.png"
-                      style="width: 32px; margin-right: 0.5em;">Query</h5>
+                  <img src="img/game-maker-icon.png" style="width: 32px;">
+                  <h5 class="card-title">Query</h5>
                   <p class="card-text">An abstract dream world exploration game. Made in Game Maker: Studio.</p>
                   <div>
-                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i><p style="display: inline;"> Downloadable Demo</p>
+                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i>
+                    <p style="display: inline;"> Downloadable Demo</p>
                   </div>
                   <button style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
-                  <button style="margin-top: 1em; color: rgb(112, 174, 255);" type="button" class="btn btn-outline-secondary disabled"><i class="fa-solid fa-circle-down"></i> Demo</button>
+                  <button style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
+                    class="btn btn-outline-secondary disabled"><i class="fa-solid fa-circle-down"></i> Demo</button>
                 </div>
               </div>
             </div>
           </div>
+
           <div style="margin-top: 3em;" class="row">
             <div class="col">
-              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><img src="img/unreal-engine-icon.png"
-                      style="width: 32px; margin-right: 0.5em;">The Venusian Tower</h5>
+                  <img src="img/unreal-engine-icon.png" style="width: 32px;">
+                  <h5 class="card-title">The Venusian Tower</h5>
                   <p class="card-text">A roguelike dungeon crawler. Made in Unreal Engine 5.</p>
                   <div>
-                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i><p style="display: inline;"> Downloadable Demo</p>
+                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i>
+                    <p style="display: inline;"> Downloadable Demo</p>
                   </div>
                   <button style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
-                  <button onclick="window.open('https://drive.google.com/file/d/1A4oEdaw58hoJE4-kJTbDvYKYPbtqj5ll/view?usp=sharing', '_blank')" style="margin-top: 1em; color: rgb(112, 174, 255);" type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-circle-down"></i> Demo</button>
+                  <button
+                    onclick="window.open('https://drive.google.com/file/d/1A4oEdaw58hoJE4-kJTbDvYKYPbtqj5ll/view?usp=sharing', '_blank')"
+                    style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
+                    class="btn btn-outline-secondary"><i class="fa-solid fa-circle-down"></i> Demo</button>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><i style="color: rgb(112, 174, 255);" class="fa-brands fa-js"></i> Grove</h5>
+                  <i style="color: rgb(112, 174, 255);" class="fa-brands fa-js fa-2x"></i>
+                  <h5 class="card-title">Grove</h5>
                   <p class="card-text">An incremental plant game. Made with Javascript.</p>
                   <div>
-                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-globe"></i><p style="display: inline;"> Browser Link</p>
+                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-globe"></i>
+                    <p style="display: inline;"> Browser Link</p>
                   </div>
                   <button style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
-                  <button onclick="window.open('https://studiotricolor.github.io/Grove/')" target="_blank" style="margin-top: 1em; color: rgb(112, 174, 255);" type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Link</button>
+                  <button onclick="window.open('https://studiotricolor.github.io/Grove/')" target="_blank"
+                    style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
+                    class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Link</button>
                 </div>
               </div>
             </div>
           </div>
           <div style="margin-top: 3em;" class="row">
             <div class="col">
-              <div class="card" style="width: 18rem; background-color: rgba(0, 0, 0, 0.219);">
+              <div class="card" style="background-color: rgba(0, 0, 0, 0.219);">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"><i style="color: rgb(112, 174, 255);" class="fa-brands fa-js"></i> A Darkest Heart</h5>
+                  <i style="color: rgb(112, 174, 255);" class="fa-brands fa-js fa-2x"></i>
+                  <h5 class="card-title">A Darkest
+                    Heart</h5>
                   <p class="card-text">An incremental plant game. Made with Javascript.</p>
                   <div>
-                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-globe"></i><p style="display: inline;"> Browser Link</p>
+                    <i style="color: rgb(112, 174, 255);" class="fa-solid fa-globe"></i>
+                    <p style="display: inline;"> Browser Link</p>
                   </div>
                   <button style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
-                  <button onclick="window.open('https://briankduncanii.github.io/a_darkest_heart/')" target="_blank" style="margin-top: 1em; color: rgb(112, 174, 255);" type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Link</button>
+                  <button onclick="window.open('https://briankduncanii.github.io/a_darkest_heart/')" target="_blank"
+                    style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
+                    class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Link</button>
                 </div>
               </div>
+            </div>
+            <div class="col">
+              
             </div>
           </div>
         </div>
-        <h3 id="contact" style="margin-top: 1em;"><i style="color: rgb(89, 140, 206);"
+        <h3 id="contact" style="margin-top: 3em;"><i style="color: rgb(89, 140, 206);"
             class="fa-solid fa-paper-plane"></i> Contact</h3>
         <hr>
         <p>Feel free to send me a message if you'd like to get in touch!</p>
@@ -344,55 +418,72 @@
               <div class="row">
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="First Name" aria-label="Username"
-                      aria-describedby="basic-addon1">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control"
+                      placeholder="First Name" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Last Name" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="input-group mb-3">
-                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Email" aria-label="Username"
-                      aria-describedby="basic-addon1">
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="input-group mb-3">
-                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Phone (Optional)" aria-label="Username"
-                      aria-describedby="basic-addon1">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control"
+                      placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <div class="input-group mb-3">
-                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control" placeholder="Company Name (Optional)" aria-label="Username"
-                      aria-describedby="basic-addon1">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control"
+                      placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control"
+                      placeholder="Phone (Optional)" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                    <input style="background-color: rgba(0, 0, 0, 0.219);" type="text" class="form-control"
+                      placeholder="Company Name (Optional)" aria-label="Username" aria-describedby="basic-addon1">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
                   <div class="input-group">
-                    <textarea style="background-color: rgba(0, 0, 0, 0.219);" placeholder="Your message..." class="form-control" aria-label="With textarea"></textarea>
+                    <textarea style="background-color: rgba(0, 0, 0, 0.219);" placeholder="Your message..."
+                      class="form-control" aria-label="With textarea"></textarea>
                   </div>
                 </div>
               </div>
-              <p id="confirmation-text" style="margin-bottom: -0.5em; color: rgb(0, 216, 0); text-shadow:rgb(0, 216, 0) 0em 0em 0.5em;" hidden><i class="fa-solid fa-paper-plane"></i> Your message has been sent!</p>
-              <button onclick="submitEmail()" style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
+              <p id="confirmation-text"
+                style="margin-bottom: -0.5em; color: rgb(0, 216, 0); text-shadow:rgb(0, 216, 0) 0em 0em 0.5em;" hidden>
+                <i class="fa-solid fa-paper-plane"></i> Your message has been sent!</p>
+              <button onclick="submitEmail()"
+                style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
                 type="button" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>
+        <div>
+          <div style="background-color: rgba(0, 0, 0, 0.219);" class="card">
+            <div class="card-body">
+              <h5>If you'd like to browse this site's source code... </h5><button onclick="openPortfolioLink()"
+              style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
+              type="button" class="btn btn-primary">Portfolio Github Repo</button>
+          </div>
+          
+        </div>
       </div>
+      
     </div>
+    
   </div>
+
+  
 </body>
 
 <script>

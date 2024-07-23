@@ -67,3 +67,7 @@ function submitEmail() {
     setTimeout(() => toast.classList.remove("show"), 5000);
     document.getElementById("confirmation-text").hidden = false;
 }
+
+function openPortfolioLink() {
+    window.open("https://github.com/BrianKDuncanII/Portfolio", "_blank");
+}
