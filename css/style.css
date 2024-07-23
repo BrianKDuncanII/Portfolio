@@ -190,3 +190,8 @@ a {
         display: none;
     }
 }
+
+.error {
+    border-color: red !important;
+    box-shadow: 0 0 1em 0.1rem rgba(255, 0, 0, 0.158) !important;
+}

@@ -18,6 +18,11 @@ tippy('#showcase-button', {
     placement: 'bottom'
 });
 
+tippy('#portfolio-github-button', {
+    content: 'This will open Github in a seperate window.',
+    placement: 'left'
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -62,11 +67,79 @@ function toggleGithubActivity() {
 }
 
 function submitEmail() {
+    var firstName = document.getElementById("first-name");
+    var lastName = document.getElementById("last-name");
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var company = document.getElementById("company");
+    var subject = document.getElementById("subject");
+    var message = document.getElementById("message");
+
+    var errorFlag = 0;
+
+    if(firstName.value == "") {
+        firstName.classList.add("error");
+        errorFlag = 1;
+    }
+
+    if(lastName.value == "") {
+        lastName.classList.add("error");
+        errorFlag = 1;
+    }
+
+    if(email.value == "") {
+        email.classList.add("error");
+        errorFlag = 1;
+    }
+
+    if(subject.value == "") {
+        subject.classList.add("error");
+        errorFlag = 1;
+    }
+
+    if(message.value == "") {
+        message.classList.add("error");
+        errorFlag = 1;
+    }
+
+    if(errorFlag == 1) {
+        document.getElementById("error-text").hidden = false;
+    } else {
+        $.ajax({
+            method: 'POST',
+            url: 'https://formsubmit.co/ajax/your@email.com',
+            dataType: 'json',
+            accepts: 'application/json',
+            data: {
+                name: "FormSubmit",
+                message: "I'm from Devro LABS"
+            },
+            success: (data) => console.log(data),
+            error: (err) => console.log(err)
+        });
+
+        console.log("Submit button pressed!");
+    }
+
+    /*
     toast = document.getElementById("confirmationToast");
     toast.classList.add("show");
     setTimeout(() => toast.classList.remove("show"), 5000);
     document.getElementById("confirmation-text").hidden = false;
+    */
 }
+
+document.getElementById("first-name").addEventListener('input', function (evt) {
+    document.getElementById("first-name").classList.remove("error");
+});
+
+document.getElementById("last-name").addEventListener('input', function (evt) {
+    document.getElementById("last-name").classList.remove("error");
+});
+
+document.getElementById("email").addEventListener('input', function (evt) {
+    document.getElementById("email").classList.remove("error");
+});
 
 function openPortfolioLink() {
     window.open("https://github.com/BrianKDuncanII/Portfolio", "_blank");
