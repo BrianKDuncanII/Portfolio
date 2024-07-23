@@ -36,10 +36,10 @@
 </head>
 
 <body data-bs-theme="dark">
-  <div id="main-page">
-    <div class="falling-shapes left"></div>
-    <div class="falling-shapes right"></div>
+  <div class="falling-shapes left"></div>
+  <div class="falling-shapes right"></div>
 
+  <div id="main-page" hidden>
     <div class="container">
       <div class="row">
         <div id="side-navbar" class="col-4">
@@ -590,53 +590,19 @@
     </div>
   </div>
 
-  <div style="text-align: center;" id="showcase-page" hidden>
-    <a onclick="closeShowcase()" href="#">Go Back</a>
+  <div style="text-align: center;" id="showcase-page">
+    <div class="container">
+      <a onclick="closeShowcase()" href="#">Go Back</a>
 
-    <h1 class="text-center my-4">Project Showcase Collage</h1>
-        <div class="row" id="projectGrid">
-            <!-- Grid items will be dynamically added here -->
-        </div>
+      <h1 class="text-center my-4">Project Showcase Collage</h1>
+      <hr>
+
+
+      <div class="row justify-content-center" id="projectGrid">
+        <!-- Grid items will be dynamically added here -->
+      </div>
+    </div>
   </div>
 </body>
 
 <script src="js/main.js"></script>
-
-<script>
-  // Array of your project GIFs
-  const projects = [
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanZsb2s2anVscTc5ZmluNG52dWpoNG5xdWc0M3Bjemd6ZWJjcGsxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZBtlVUPFMRp35lHyyR/giphy.gif', alt: 'Project 1' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWdra2Rkc3VpcndscW9rYWQzaDJyZTlxM2Nxb2UwcTZ4ZGdueG1pOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f9MKnPuybaFjXW1vJD/giphy.gif', alt: 'Project 2' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjBoenVsZmRlb202OWRqczBmN2w2MnhjNGthNTJzd2tjczBsaGdpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H4uDu6QEjrnpdhRc96/giphy.gif', alt: 'Project 3' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp5YndoeGNuczZjcWR0a3J3cjRwM2Rjd2tyb2V6bGpsdjFreWpuNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2jQz5xH7GbwFpNsusZ/giphy.gif', alt: 'Project 4' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2NqajA5MGJ5cGl4emExeW0zYmlqdXBleHU3OWhkZnI0cDU3bXN2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vg0NQVelj7PIBSlqFa/giphy.gif', alt: 'Project 5' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRsdDkwMWNuaDdydXF3bG94N21nZGNoaDh5eWcza2puaGtnZ2UxdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yjPvDsdBdvN61wTwPT/giphy.gif', alt: 'Project 6' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExazl6NGczN3FzbGhkZmtycWdmOTAzc2kzcHgyeDdtbWduMGsxM3RwdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wLKubaEL7jBukj9Iju/giphy.gif', alt: 'Project 7' },
-      { src: 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VqZHgzM3M0ZHNxaXByd25uNG5mN3gzN3BlZmE2c2ZjNmZqOXdsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KoEBCeLVvPE2sn0xCG/giphy.gif', alt: 'Project 8' },
-  ];
-
-  // Function to shuffle array
-  function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
-      }
-  }
-
-  // Function to create grid items
-  function createGridItems() {
-      const grid = document.getElementById('projectGrid');
-      shuffleArray(projects);
-      
-      projects.forEach(project => {
-          const colSize = Math.floor(Math.random() * 2) + 3; // Random size between 3 and 4
-          const gridItem = document.createElement('div');
-          gridItem.className = `col-md-${colSize} grid-item`;
-          gridItem.innerHTML = `<img src="${project.src}" alt="${project.alt}" class="img-fluid">`;
-          grid.appendChild(gridItem);
-      });
-  }
-
-  // Call the function when the page loads
-  window.onload = createGridItems;
-</script>
