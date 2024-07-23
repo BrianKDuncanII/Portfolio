@@ -103,9 +103,23 @@
       <div
         style="overflow:scroll; overflow-x: hidden; max-height: 75em; scrollbar-width: thin; scrollbar-color: rgb(89, 140, 206) rgba(0, 0, 0, 0.219);"
         style="margin-top: 7.5em;" class="col">
-        <h3 id="about-me"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user"></i> About Me</h3>
+        <div id="about-me" class="row">
+          <div class="col-1">
+            <i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>About Me</h3>
+          </div>
+        </div>
         <hr>
-        <h3 style="margin-top: 3em;" id="skills"><i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb"></i> Skills</h3>
+        <div style="margin-top: 3em;" id="skills" class="row">
+          <div class="col-1 text-center">
+            <i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb fa-2x"></i>
+          </div>
+          <div class="col">
+            <h3>Skills</h3>
+          </div>
+        </div>
         <hr>
         <div class="container">
           <div class="row">
@@ -312,7 +326,8 @@
                     <i style="color: rgb(112, 174, 255);" class="fa-solid fa-download"></i>
                     <p style="display: inline;"> Downloadable Demo</p>
                   </div>
-                  <button data-bs-toggle="modal" data-bs-target="#aevum-modal" style="margin-top: 1em;" type="button" class="btn btn-outline-secondary">Details</button>
+                  <button data-bs-toggle="modal" data-bs-target="#aevum-modal" style="margin-top: 1em;" type="button"
+                    class="btn btn-outline-secondary">Details</button>
                   <button style="margin-top: 1em; color: rgb(112, 174, 255);" type="button"
                     class="btn btn-outline-secondary disabled"><i class="fa-solid fa-circle-down"></i> Demo</button>
 
@@ -400,7 +415,7 @@
               </div>
             </div>
             <div class="col">
-              
+
             </div>
           </div>
         </div>
@@ -468,65 +483,34 @@
           <div style="background-color: rgba(0, 0, 0, 0.219);" class="card">
             <div class="card-body">
               <h5>If you'd like to browse this site's source code... </h5><button onclick="openPortfolioLink()"
-              style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
-              type="button" class="btn btn-primary">Portfolio Github Repo</button>
+                style="margin-top: 1em; border-color: rgb(89, 140, 206); background-color: rgb(89, 140, 206);"
+                type="button" class="btn btn-primary">Portfolio Github Repo</button>
+            </div>
+
           </div>
-          
         </div>
-      </div>
-      
-    </div>
-    
-  </div>
 
-  <div id="aevum-modal" class="modal fade" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Aevum</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+
+    <div id="aevum-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Aevum</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
-
-<script>
-  const skills = [
-    '<p id="skills-counter"><i class="fas fa-code"></i> Front-End Developer</p>',
-    '<p id="skills-counter"><i class="fas fa-gamepad"></i> Game Developer</p>',
-    '<p id="skills-counter"><i class="fas fa-music"></i> Music Producer</p>',
-    '<p id="skills-counter"><i class="fas fa-headphones"></i> Sound Designer</p>',
-    '<p id="skills-counter"><i class="fa-solid fa-camera"></i> Video Editor</p>'
-  ];
-  let currentIndex = 0;
-
-  function morphText() {
-    const textElement = document.querySelector('#morphing-text span');
-
-    textElement.classList.add('fade');
-
-    setTimeout(() => {
-      textElement.innerHTML = skills[currentIndex];
-
-      void textElement.offsetWidth;
-
-      textElement.classList.remove('fade');
-
-      currentIndex = (currentIndex + 1) % skills.length;
-
-      setTimeout(morphText, 2000);
-    }, 500);
-  }
-
-  morphText();
-</script>
 
 <script src="js/main.js"></script>
 
@@ -538,4 +522,3 @@
     <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
   </div>
 </div>
-
