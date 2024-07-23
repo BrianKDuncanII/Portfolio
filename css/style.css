@@ -19,7 +19,21 @@
     margin-right: 0.25em;
 }
 
-p, h5, h4, h3, h2, h1 {
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+p,
+h5,
+h4,
+h3,
+h2,
+h1 {
     pointer-events: none;
 }
 
@@ -137,37 +151,33 @@ a {
     bottom: 0;
     width: 250px;
     pointer-events: none;
-  }
-  
-  .falling-shapes.left {
+}
+
+.falling-shapes.left {
     left: 0;
-  }
-  
-  .falling-shapes.right {
+}
+
+.falling-shapes.right {
     right: 0;
-  }
-  
-  .shape {
+}
+
+.shape {
     position: absolute;
     width: 20px;
     height: 20px;
     color: rgba(255, 255, 255, 0.13);
     font-size: 20px;
     animation: fall linear infinite;
-  }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(-20px) rotate(0deg);
-    }
-    100% {
-      transform: translateY(100vh) rotate(360deg);
-    }
-  }
+}
 
-  /* Your regular navbar styles here */
-#side-navbar {
-    /* Your existing styles */
+@keyframes fall {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
 }
 
 /* Hide the navbar on screens smaller than 768px (typical tablet width) */
@@ -175,6 +185,7 @@ a {
     #side-navbar {
         display: none;
     }
+
     .falling-shapes {
         display: none;
     }
