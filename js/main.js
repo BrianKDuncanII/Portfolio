@@ -168,3 +168,13 @@ function morphText() {
 }
 
 morphText();
+
+function openShowcase() {
+    document.getElementById("main-page").hidden = true;
+    document.getElementById("showcase-page").hidden = false;
+}
+
+function closeShowcase() {
+    document.getElementById("main-page").hidden = false;
+    document.getElementById("showcase-page").hidden = true;
+}
