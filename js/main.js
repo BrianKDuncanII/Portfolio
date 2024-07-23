@@ -172,11 +172,15 @@ morphText();
 function openShowcase() {
     document.getElementById("main-page").hidden = true;
     document.getElementById("showcase-page").hidden = false;
+    // set body overflow to auto
+    document.body.style.overflow = "auto";
 }
 
 function closeShowcase() {
     document.getElementById("main-page").hidden = false;
     document.getElementById("showcase-page").hidden = true;
+    // set body overflow to hidden
+    document.body.style.overflow = "hidden";
 }
 
 // Array of your project GIFs
