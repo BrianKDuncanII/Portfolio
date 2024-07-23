@@ -105,6 +105,7 @@ function submitEmail() {
     if(errorFlag == 1) {
         document.getElementById("error-text").hidden = false;
     } else {
+        
         $.ajax({
             method: 'POST',
             url: 'https://formsubmit.co/ajax/your@email.com',
@@ -114,19 +115,13 @@ function submitEmail() {
                 name: "FormSubmit",
                 message: "I'm from Devro LABS"
             },
-            success: (data) => console.log(data),
+            success: (data) => {
+                document.getElementById("confirmation-text").hidden = false;
+            },
             error: (err) => console.log(err)
         });
-
-        console.log("Submit button pressed!");
+        
     }
-
-    /*
-    toast = document.getElementById("confirmationToast");
-    toast.classList.add("show");
-    setTimeout(() => toast.classList.remove("show"), 5000);
-    document.getElementById("confirmation-text").hidden = false;
-    */
 }
 
 document.getElementById("first-name").addEventListener('input', function (evt) {
