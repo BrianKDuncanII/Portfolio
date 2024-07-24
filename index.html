@@ -54,31 +54,31 @@
             <img style="margin-left: 256px; width: 64px; position: absolute; z-index: -1; opacity: 0.05;"
               src="img/dots.png">
           </div>
-          <h1 id="name-title" style="margin-left: 0.25em;">Brian Duncan II</h1>
+          <h2 id="name-title" style="margin-left: 0.25em;"><img style="width: 50px; height: 50px; object-fit: cover; border-radius: 1em;" src="img/20200323_192812.jpg"> Brian Duncan II</h2>
           <div style="margin-top: 1em;" id="morphing-text"><span></span></div>
           <hr>
           <div style="margin-left: 1em;">
-            <div>
-              <a style="width: 8em;" href="#about-me">
+            <div hidden>
+              <a style="width: 7em;" href="#about-me">
                 <h5><i class="fa-solid fa-caret-right"></i> About Me</h5>
               </a>
             </div>
             <div>
-              <a style="width: 8em;" href="#skills">
+              <a style="width: 7em;" href="#skills">
                 <h5><i class="fa-solid fa-caret-right"></i> Skills</h5>
               </a>
             </div>
             <div>
-              <a style="width: 8em;" href="#projects">
+              <a style="width: 7em;" href="#projects">
                 <h5><i class="fa-solid fa-caret-right"></i> Projects</h5>
               </a>
             </div>
-            <a style="width: 8em;" href="#contact">
+            <a style="width: 7em;" href="#contact">
               <h5><i class="fa-solid fa-caret-right"></i> Contact</h5>
             </a>
             <div>
-              <a onclick="openShowcase()" id="showcase-button" style="width: 8em;" href="#">
-                <h5><i class="fa-solid fa-caret-right"></i> Showcase</h5>
+              <a onclick="openShowcase()" id="showcase-button" style="width: 12em;" href="#">
+                <h5><i class="fa-solid fa-caret-right"></i> GameDev Showcase</h5>
               </a>
             </div>
 
@@ -103,15 +103,16 @@
         <div
           style="overflow:scroll; overflow-x: hidden; max-height: 75em; scrollbar-width: thin; scrollbar-color: rgb(89, 140, 206) rgba(0, 0, 0, 0.219);"
           style="margin-top: 7.5em;" class="col">
-          <div id="about-me" class="row">
+          <div id="about-me" class="row" hidden>
             <div class="col-1">
               <i style="color: rgb(89, 140, 206);" class="fa-solid fa-circle-user fa-2x"></i>
             </div>
             <div class="col">
               <h3 style="font-weight: bold;">About Me</h3>
             </div>
+            <hr>
           </div>
-          <hr>
+          
           <div style="margin-top: 3em;" id="skills" class="row">
             <div class="col-1 text-center">
               <i style="color: rgb(89, 140, 206);" class="fa-solid fa-lightbulb fa-2x"></i>
@@ -129,14 +130,25 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-3">
-                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-html5 fa-3x"></i>
+                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-regular fa-object-ungroup fa-3x"></i>
                         </div>
                         <div class="col">
-                          <h5>HTML/CSS</h5>
+                          <h5>Front-End Development</h5>
                         </div>
                       </div>
                       <hr>
-                      <p">4 Years Experience</p>
+                      <div>
+                        <p>HTML <i class="fa-brands fa-html5"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">4 Years Experience</p>
+                      </div>
+                      <div>
+                        <p>CSS <i class="fa-brands fa-css3"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">4 Years Experience</p>
+                      </div>
+                      <div>
+                        <p>Javascript <i class="fa-brands fa-js"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">4 Years Experience</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -147,15 +159,23 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-3">
-                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-js fa-3x"></i>
+                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-code-fork fa-3x"></i>
+
                         </div>
                         <div class="col">
-                          <h5>Javascript</h5>
+                          <h5>Source Control</h5>
                         </div>
                       </div>
 
                       <hr>
-                      <p>4 Years Experience</p>
+                      <div>
+                        <p>Github <i class="fa-brands fa-github-alt"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">6 Years Experience</p>
+                      </div>
+                      <div>
+                        <p>SVN <i class="fa-solid fa-code-commit"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">3 Years Experience</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -169,14 +189,17 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-3">
-                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-brands fa-java fa-3x"></i>
+                          <i id="skill-icon" style="color: rgb(89, 140, 206);" class="fa-solid fa-database fa-3x"></i>
                         </div>
                         <div class="col">
-                          <h5>Java</h5>
+                          <h5>Back-End Development</h5>
                         </div>
                       </div>
                       <hr>
-                      <p>2 Years Experience</p>
+                      <div>
+                        <p>MySQL <i class="fa-solid fa-code-commit"></i></p>
+                        <p style="margin-top: -1em; font-style: italic;">1 Year Experience</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -480,7 +503,12 @@
             </div>
           </div>
           <hr>
-          <p>Feel free to send me a message if you'd like to get in touch!</p>
+          <p>Feel free to send me a message if you'd like to get in touch! I typically respond to the following subjects:</p>
+          <ul>
+            <li style="font-weight: bold; color: rgb(89, 140, 206);">Employment Opportunities/Interview Requests</li>
+            <li style="font-weight: bold; color: rgb(89, 140, 206);">Collaboration Requests (Game Development/Music & Sound)</li>
+            <li style="font-weight: bold; color: rgb(89, 140, 206);">Questions about my previous projects and released games</li>
+          </ul>
           <p style="display: inline;">If you'd like to email me directly, you can use this address: </p><a href="#"
             onclick="window.open('mailto:briankduncan2@gmail')">briankduncan2@gmail.com</a>
           <div class="card" style="background-color: rgba(0, 0, 0, 0.219); margin-bottom: 1em;">
