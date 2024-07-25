@@ -174,6 +174,7 @@ function openShowcase() {
     document.getElementById("showcase-page").hidden = false;
     // set body overflow to auto
     document.body.style.overflow = "auto";
+    createGridItems();
 }
 
 function closeShowcase() {
@@ -307,4 +308,4 @@ function createGridItems() {
     });
 }
 
-window.onload = createGridItems;
+//window.onload = createGridItems;
