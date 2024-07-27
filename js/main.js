@@ -308,4 +308,25 @@ function createGridItems() {
     });
 }
 
+function projectFilter(filter) {
+    const unrealButton = document.getElementById("unreal-filter-button");
+    const gameMakerButton = document.getElementById("game-maker-filter-button");
+    const htmlJsButton = document.getElementById("html-js-filter-button");
+
+    if(filter == "unreal") {
+        // get all elements with 'unreal-engine' class
+        const elements = document.getElementsByClassName("unreal");
+        // hide all elements
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "none";
+        }
+        // show elements with 'unreal-engine' class
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = "block";
+        }
+    }
+
+    console.log("Hellow World");
+}   
+
 //window.onload = createGridItems;
