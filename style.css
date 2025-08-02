@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+#about-me-img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.project-image {
+    border-radius: 10px;
+    width: 325px;
+    height: 200px;
+    max-width: 325px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.hover-animation:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-content {
+    margin-top: 1em;
+}
+
+.gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg,
+            #0d1117 0%,
+            #1a1a2e 25%,
+            #16213e 50%,
+            #0f3460 75%,
+            #0d1117 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.gradient-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%,
+            rgba(26, 26, 46, 0.6),
+            transparent 50%),
+        radial-gradient(circle at 80% 20%,
+            rgba(22, 33, 62, 0.5),
+            transparent 50%),
+        radial-gradient(circle at 40% 40%,
+            rgba(15, 52, 96, 0.4),
+            transparent 50%);
+    animation: floatingOrbs 20s ease-in-out infinite;
+}
+
+.player {
+    width: 50%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.player::-webkit-media-controls-panel {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 50% 100%;
+    }
+}
+
+@keyframes floatingOrbs {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.7;
+    }
+
+    33% {
+        transform: translate(30px, -30px) rotate(120deg);
+        opacity: 0.9;
+    }
+
+    66% {
+        transform: translate(-20px, 20px) rotate(240deg);
+        opacity: 0.8;
+    }
+}

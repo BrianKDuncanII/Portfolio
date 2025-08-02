@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian K. Duncan II - Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="https://kit.fontawesome.com/a636e71e2c.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-bs-theme="dark">
+    <div class="gradient-background"></div>
+
+    <nav style="background-color: #22325e75 !important;" class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Brian K. Duncan II</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item hover-animation">
+                        <a class="nav-link active" href="#about-me"><i style="color: #1f6cca;"
+                                class="fa-solid fa-circle-user"></i>
+                            About Me</a>
+                    </li>
+                    <li class="nav-item hover-animation">
+                        <a class="nav-link" href="#projects"><i style="color: #1f6cca;" class="fa-solid fa-palette"></i>
+                            Projects</a>
+                    </li>
+                    <li class="nav-item hover-animation">
+                        <a class="nav-link" href="#skills"><i style="color: #1f6cca;" class="fa-solid fa-lightbulb"></i>
+                            Skills & Experience</a>
+                    </li>
+                    <li class="nav-item hover-animation">
+                        <a class="nav-link" href="#contact"><i style="color: #1f6cca;" class="fa-solid fa-envelope"></i>
+                            Contact</a>
+                    </li>
+                    <div style="position: absolute; right: 0; margin-right: 1em; display: flex;">
+                        <li id="github" class="nav-item">
+                            <a class="nav-link hover-animation" href="https://github.com/BrianKDuncanII"
+                                target="_blank"><i style="color: #1f6cca;"
+                                    class="fa-2xl fa-brands fa-github-alt"></i></a>
+                        </li>
+                        <li id="youtube" class="nav-item">
+                            <a class="nav-link hover-animation" href="https://www.youtube.com/@Roesilej"
+                                target="_blank"><i style="color: #3e84da;" class="fa-2xl fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li id="bluesky" class="nav-item">
+                            <a class="nav-link hover-animation" href="https://bsky.app/profile/roesilej.bsky.social"
+                                target="_blank"><i style="color: #5b8ecc;" class="fa-2xl fa-brands fa-bluesky"></i></a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div id="about-me" style="background-color: #0d294d60; pointer-events: none;" class="card">
+            <div class="card-body">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-4">
+                            <img id="about-me-img" src="img/about-me-img.webp">
+                        </div>
+                        <div style="margin-top: 2em; text-align: center; text-shadow: 3px 3px 5px #000000;" class="col">
+                            <h3>Hello there! I'm Brian (also known as Roesilej). Welcome to my portfolio.</h3>
+                            <h5>I enjoy <i class="fa-solid fa-gamepad"></i> Game Development, <i
+                                    class="fa-solid fa-code"></i> Coding, <i class="fa-solid fa-music"></i> Music
+                                Production, <i class="fa-solid fa-video"></i> Video Editing, and more.</h5>
+                            <p>Check out my projects and contact me if you have any questions!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 id="projects" style="text-align: center; margin-top: 1em; text-shadow: 3px 3px 5px #000000;">Projects</h1>
+        <h6 style="text-align: center; margin-top: 1em; text-shadow: 3px 3px 5px #000000;">A collection of my past and
+            current projects</h6>
+        <div style="background-color: #0d294d60;" class="card">
+            <div class="card-body">
+                <h4 style="text-shadow: 3px 3px 5px #000000;">Game Development</h4>
+                <hr>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFld21qeXV2OHVjejRydXg1dWd4b3N1MDg3bXBuMTVyNnNmdW1mNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/g2poKJPvwNBQGbDIoa/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/2RWOs6T9hZ84PDgaVB/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/eScUBt4Os3G1Hgnsf7/giphy.gif">
+                        </div>
+                    </div>
+                    <div style="margin-top: 1em;" class="row">
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/KoEBCeLVvPE2sn0xCG/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/vg0NQVelj7PIBSlqFa/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/2jQz5xH7GbwFpNsusZ/giphy.gif">
+                        </div>
+                    </div>
+                    <div style="margin-top: 1em;" class="row">
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/IguXldMdSJqH8CA0tJ/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media.giphy.com/media/6xYqJT8b9iAVHBSaA4/giphy.gif">
+                        </div>
+                        <div class="col">
+                            <img class="hover-animation project-image"
+                                src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmJlNzk5ZDBwbm9scXNscTlhdmE4OHVzazlocHJpamV3Z3dvdnF2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tR8rcdmt75iIDLJt3Z/giphy.gif">
+                        </div>
+                    </div>
+                </div>
+                <h4 style="margin-top: 1em; text-shadow: 3px 3px 5px #000000;">Video Editing</h4>
+                <hr>
+                <div class="container text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/beshbcSwZGQ?si=-ywr7D6YLTE0Ez6T"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JfR8YTFiL9Y?si=MyTPMgGeUi73JRPR"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h4 style="margin-top: 1em; text-shadow: 3px 3px 5px #000000;">Music Production</h4>
+                <hr>
+                <div class="container text-center">
+                    <h5 style="text-shadow: 3px 3px 5px #000000;">Title: 2/7/2025 #2</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/2_7_2025_2.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: 5/11/2022</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/5-11-2022.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: 7/17/2022</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/7-17-2022.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: Anyone (Original Vocals)</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/Anyone.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: Random Guitar Riff w/ Drums
+                        (Original Instrumentals)</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/random guitar riff with drums.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: Don't Let Me Go</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/Don't Let Me Go.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: Feeling This</h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/Feeling This.ogg" type="audio/ogg">
+                    </audio>
+
+                    <h5 style="text-shadow: 3px 3px 5px #000000; margin-top: 1em;">Title: Discontent (Original Vocals)
+                    </h5>
+                    <audio class="player" controls preload="metadata">
+                        <source src="audio/Discontent.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="skills" style="text-align: center; margin-top: 1em; text-shadow: 3px 3px 5px #000000;">Skills & Experience</h1>
+        <div style="background-color: #0d294d60;" class="card">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <h3 style="margin-top: 1em;">Programming Languages</h3>
+                        <hr>
+                        <h4 style="margin-top: 1em;">HTML (5 Years)</h4>
+                        <h4 style="margin-top: 1em;">CSS (5 Years)</h4>
+                        <h4 style="margin-top: 1em;">Javascript (5 Years)</h4>
+                        <h4 style="margin-top: 1em;">Python (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">Lua (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">C# (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">Java (2 Year)</h4>
+                    </div>
+                    <div class="col">
+                        <h3 style="margin-top: 1em;">Foreign Languages</h3>
+                        <hr>
+                        <h4 style="margin-top: 1em;">English (Native)</h4>
+                        <h4 style="margin-top: 1em;">Russian (Beginner Reading/Speaking)</h4>
+                        <h4 style="margin-top: 1em;">French (Beginner Reading/Speaking)</h4>
+                        <h4 style="margin-top: 1em;">Japanese (Beginner Reading/Speaking)</h4>
+                        <h4 style="margin-top: 1em;">Spanish (Beginner Reading/Speaking)</h4>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <h3 style="margin-top: 1em;">Game Engines</h3>
+                        <hr>
+                        <h4 style="margin-top: 1em;">Unity (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">Unreal Engine 4/5 (5 Years)</h4>
+                        <h4 style="margin-top: 1em;">Game Maker Studio 1.4 (9 Years)</h4>
+                        <h4 style="margin-top: 1em;">Game Maker Studio 2 (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">Cryengine (1 Year)</h4>
+                        <h4 style="margin-top: 1em;">RPG Maker VX (1 Year)</h4>
+                    </div>
+                    <div class="col">
+                        <h3 style="margin-top: 1em;">Other Experience</h3>
+                        <hr>
+                        <h4 style="margin-top: 1em;">Audacity (5 Years)</h4>
+                        <h4 style="margin-top: 1em;">Sony Vegas Pro (6 Years)</h4>
+                        <h4 style="margin-top: 1em;">Adobe After Effects (2 Years)</h4>
+                        <h4 style="margin-top: 1em;">Ableton Live (4 Years)</h4>
+                        <h4 style="margin-top: 1em;">GIMP (3 Years)</h4>
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+
+        </div>
+        <h1 id="contact" style="text-align: center; margin-top: 1em; text-shadow: 3px 3px 5px #000000;">Contact</h1>
+        <a href="mailto: BrianKDuncan2@gmail.com"><h4 style="text-align: center; margin-bottom: 5em;">BrianKDuncan2@gmail.com</h4></a>
+    </div>
+    </div>
+
+
+    </div>
+</body>
+
+<script src="main.js"></script>
+
+</html>
